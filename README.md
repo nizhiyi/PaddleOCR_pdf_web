@@ -261,5 +261,6 @@ python main.py
 
 
 ## 微信公众号 
-![alt text](image.png)
+![alt text](docx/image.png)
+
 希望这篇实战分享能对你有所帮助！如有疑问欢迎在评论区讨论。
