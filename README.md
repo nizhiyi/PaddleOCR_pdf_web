@@ -212,7 +212,11 @@ python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/pac
 
 #### 安装其他依赖
 ```bash
-pip install fastapi uvicorn python-multipart pymupdf paddleocr==3.2.0 reportlab logging beautifulsoup4
+# 安装 PaddlePaddle CPU 版本
+python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
+
+# 安装辅助库
+python -m pip install fastapi uvicorn python-multipart opencv-python numpy Pillow PyMuPDF reportlab tqdm paddleocr beautifulsoup4 io
 ```
 
 #### GPU 环境验证（仅 GPU 用户）
