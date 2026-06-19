@@ -178,57 +178,31 @@ def sse(tid: str):
 
 ## 7. 环境安装与部署
 
-### 7.1 本地环境安装 (Ubuntu/Conda)
+### 7.1 本地环境安装
 
-#### 方式一：系统 Python 安装
-```bash
-sudo apt update
-sudo apt install -y \
-  python3.10 \
-  python3.10-venv \
-  python3.10-dev \
-  python3.10-distutils \
-  python3-pip
-```
+#### 系统 Python 安装
 
-#### 方式二：Conda 环境（推荐）
-```bash
-conda create --name paddle python==3.10
-conda activate paddle
-```
+python3.13（3.14不行）
 
 #### 安装 PaddlePaddle（GPU版）
 适用于拥有 NVIDIA GPU 的用户：
-```bash
+
 python -m pip install paddlepaddle-gpu==3.2.0 \
   -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
-```
 
 #### 安装 PaddlePaddle（CPU版）
 适用于无 GPU 或仅使用 CPU 的用户：
-```bash
+
 python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
-```
 
 #### 安装其他依赖
-```bash
-# 安装 PaddlePaddle CPU 版本
-python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
 
-# 安装辅助库
-python -m pip install fastapi uvicorn python-multipart opencv-python numpy Pillow PyMuPDF reportlab tqdm paddleocr beautifulsoup4 io
-```
+python -m pip install fastapi uvicorn python-multipart opencv-python numpy Pillow PyMuPDF reportlab tqdm paddleocr beautifulsoup4
 
 #### GPU 环境验证（仅 GPU 用户）
-```bash
+
 nvidia-smi
 nvcc --version
-```
-
-**请以您自己的输出为准**：
-```
-[此处应显示您本地的 nvidia-smi 和 nvcc --version 输出]
-```
 
 ### 7.2 Docker 部署
 
